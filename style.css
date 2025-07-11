@@ -48,3 +48,245 @@ body {
 .btn-dark:hover {
   background-color: #444;
 }
+
+.todo{
+  display: flex;
+  gap: 10vh;
+  flex-direction: column;
+  margin-bottom: 10vh;
+}
+
+#prerfumes{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5vw;
+  align-items: center;
+  justify-items: center;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.precio{
+  text-decoration: double;
+}
+
+.perfume{
+  box-shadow: 3px 3px 0px 0px rgb(179, 179, 179);
+}
+
+
+.boton-comprar{
+  width: 80%;
+  height: 17%;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.boton-comprar p{
+  color: rgb(255, 255, 255);
+}
+
+.boton-comprar:hover{
+    animation:animacionboton 1s ease forwards;
+}
+
+@keyframes animacionboton{
+    1% {
+        transform:scale(1)
+    }
+    100% {
+        transform:scale(1.1)
+    }
+}
+
+.menudesplegable{
+  height: 10vh;
+  width: auto;
+}
+
+.menudesplegable img{
+  height: 70%;
+  width: auto;
+}
+.espaciado-menu{
+  display: flex;
+  gap: 5vw;
+}
+.menumain{
+border: 0;
+box-shadow: 2px 2px 0 0 rgb(207, 206, 206);
+}
+.botones-etiqueta{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 30%;
+}
+.nombre-precio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#footer{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  top: 92vh;
+  left: 0;
+  box-shadow: 0 0 0 3px rgb(218, 218, 218);
+}
+.separacionfotter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20vw;
+}
+
+@media screen and (max-width: 768px) {
+  /* Ocultar el footer */
+  #footer {
+    display: none;
+  }
+
+  /* Cambiar el grid a una sola columna */
+  #prerfumes {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10vh;
+  }
+
+  /* Ajustes extra para mejorar la vista en móviles */
+  body {
+    padding-top: 60px;
+  }
+
+  .hero-img {
+    height: 50vh;
+  }
+
+  .todo {
+    gap: 5vh;
+    margin-bottom: 5vh;
+  }
+
+  .boton-comprar {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .botones-etiqueta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .carousel-caption {
+    font-size: 0.9rem;
+    bottom: 10%;
+  }
+
+  .espaciado-menu {
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+  }
+
+  .producto img {
+    width: 80vw;
+    height: auto;
+  }
+
+  .menudesplegable {
+    height: auto;
+  }
+
+  .menudesplegable img {
+    height: 50px;
+  }
+}
+.lupa-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 1.8rem;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.lupa-flotante:hover {
+  transform: scale(1.1);
+}
+@media screen and (min-width: 768px) {
+  .lupa-flotante {
+    display: none;
+  }
+}
+.lupa-flotante {
+  display: none;
+  /* ... resto del estilo ... */
+}
+/* Oculta la lupa por defecto */
+.lupa-flotante {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 1.8rem;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.lupa-flotante:hover {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 768px) {
+  .lupa-flotante {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.lupa-flotante {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: auto;
+  height: 5vh;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.lupa-flotante img{
+    width: auto;
+  height: 5vh;
+}
+
+.lupa-flotante:hover {
+  transform: scale(1.1);
+}
